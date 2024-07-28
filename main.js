@@ -43,7 +43,7 @@ const fetchIssues = () => {
   for (let i = 0; i < closedIssues.length; i++) {
     closedIssues[i].description = closedIssues[i].description.strike();    
   }  
-  openIssues.innerText = issues.length - closedIssues.length;
+  openIssues.innerText = closedIssues.length;
   for (var i = 0; i < issues.length; i++) {
     const {id, description, severity, assignedTo, status} = issues[i];
     issuesList.innerHTML +=   `<div class="well">
